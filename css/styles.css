@@ -80,6 +80,9 @@ header {
   color: #F7FFF7;
 }
 
+.bio {
+  text-align: left;
+}
 
 /* Projects
 ------------------------------------*/
