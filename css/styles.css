@@ -1,17 +1,56 @@
+body {
+  background-color: #5D5C61;
+}
+
+header {
+  color: white;
+}
+
+.header-link {
+  color: white;
+  font-size: large;
+  text-decoration: none;
+}
+
 .contain-to-grid {
   width: 100%;
+}
+
+.item-details {
+  margin-left: 70px;
+}
+
+.inherit-display {
+  display: inherit;
+}
+
+.inline-block{
+  display: inline;
+  vertical-align: middle;
+}
+
+.inline-block{
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header-logo {
   background-color: black;
 }
 
-.skills {
-  background-color: black;
+.education {
+  background-color: #7395AE;
 }
 
+.skills {
+  background-color: #B1A296;
+}
+
+.work-experience {
+  background-color: #557A95;
+}
 .projects {
-  background-color: black;
+  background-color: #a1a1a3;
 }
 
 .title-area {
@@ -26,4 +65,8 @@
   height: 100%;
   display: inline;
   padding: 30px;
+}
+
+#cover-photo {
+  max-width: 50%;
 }
