@@ -1,8 +1,11 @@
 body {
   background-color: #5D5C61;
+  font-size: larger;
 }
 
 header {
+  background-color: #5D5C61;
+  padding-bottom: 65px;
   color: white;
 }
 
@@ -18,6 +21,7 @@ header {
 
 .item-details {
   margin-left: 70px;
+  padding: 20px 100px;
 }
 
 .inherit-display {
@@ -34,8 +38,39 @@ header {
   vertical-align: middle;
 }
 
-.header-logo {
-  background-color: black;
+.about-me {
+  background-color: #a1a1a3;
+  height: 60vh;
+  display: table;
+}
+
+.about-me-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.about-me-img {
+  max-width: 30%;
+  padding: 20px;
+}
+
+.flex {
+  display: flex; /* equal height of the children */
+}
+
+.about-me-body {
+  flex: 1; /* additionally, equal width */
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+}
+
+.about-me-img {
+  width: 30%;
+}
+
+img {
+  max-width: 100%;
 }
 
 .education {
@@ -67,6 +102,14 @@ header {
   padding: 30px;
 }
 
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
 #cover-photo {
   max-width: 50%;
+  outline: black solid 2px;
 }
