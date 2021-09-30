@@ -1,27 +1,24 @@
 body {
-  background-color: #5D5C61;
+  background-color: #E9DCC9;
   font-size: larger;
 }
 
 header {
-  background-color: #5D5C61;
+  background-color: white;
+  color: #333333;
   padding-bottom: 65px;
-  color: white;
 }
-
+a {
+  text-decoration: none;
+}
 .header-link {
-  color: white;
+  color: #333333;
   font-size: large;
   text-decoration: none;
 }
 
 .contain-to-grid {
   width: 100%;
-}
-
-.item-details {
-  margin-left: 70px;
-  padding: 20px 100px;
 }
 
 .inherit-display {
@@ -39,9 +36,17 @@ header {
 }
 
 .about-me {
-  background-color: #a1a1a3;
   height: 60vh;
   display: table;
+}
+
+.about-me-right {
+  background-color: white;
+}
+
+.about-me-profile{
+  padding: 50px;
+  background-color: #EDEADE;
 }
 
 .about-me-content {
@@ -73,20 +78,7 @@ img {
   max-width: 100%;
 }
 
-.education {
-  background-color: #7395AE;
-}
 
-.skills {
-  background-color: #B1A296;
-}
-
-.work-experience {
-  background-color: #557A95;
-}
-.projects {
-  background-color: #a1a1a3;
-}
 
 .title-area {
   float: left;
@@ -110,6 +102,35 @@ img {
 }
 
 #cover-photo {
-  max-width: 50%;
-  outline: black solid 2px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.social-media-row {
+  text-align: center;
+  background-color: white;
+}
+
+.social-media-icon {
+  width: 50px;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.job-item, .project-item, .education-entry, .skills-section{
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.project-description {
+  display: inline-block;
+  width: 48%;
+}
+
+.project-image {
+  display: inline-block;
+  width: 48%;
 }
