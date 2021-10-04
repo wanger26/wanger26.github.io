@@ -1,91 +1,53 @@
-body {
-  background-color: #E9DCC9;
-  font-size: larger;
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+*/
+
+
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-header {
-  background-color: white;
-  color: #333333;
-  padding-bottom: 65px;
+body {
+  color: #343434;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+img {
+  width: 300px;
 }
 a {
+  color: white;
+  font-size: medium;
   text-decoration: none;
 }
-.header-link {
-  color: #333333;
-  font-size: large;
-  text-decoration: none;
+a:hover, #cvBTN:hover {
+  text-decoration: underline;
 }
-
-.contain-to-grid {
-  width: 100%;
+h1, h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  margin: 0;
 }
-
-.inherit-display {
-  display: inherit;
+h1 {
+  font-size: 80px;
+  line-height: 1.1;
 }
-
-.inline-block{
-  display: inline;
-  vertical-align: middle;
-}
-
-.inline-block{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.about-me {
-  height: 60vh;
-  display: table;
-}
-
-.about-me-right {
-  background-color: white;
-}
-
-.about-me-profile{
-  padding: 50px;
-  background-color: #EDEADE;
-}
-
-.about-me-content {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.about-me-img {
-  max-width: 30%;
-  padding: 20px;
-}
-
-.flex {
-  display: flex; /* equal height of the children */
-}
-
-.about-me-body {
-  flex: 1; /* additionally, equal width */
-  display: inline-block;
-  vertical-align: middle;
-  width: 60%;
-}
-
-.about-me-img {
-  width: 30%;
-}
-
-img {
-  max-width: 100%;
-}
-
-
-
-.title-area {
-  float: left;
-}
-
-.header-menu {
-  float: right;
+h2 {
+  font-size: 45px;
 }
 
 .header-menu li, .top-bar li {
@@ -94,43 +56,276 @@ img {
   padding: 30px;
 }
 
+.float-right {
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 30%;
+}
+
+.inline-block{
+  display: inline;
+  vertical-align: middle;
+}
+.inherit-display {
+  display: inherit;
+}
+
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.item-details h3 {
+  margin-bottom: 0;
+}
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+.divider > section {
+  overflow: hidden;
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border: none;
+}
+
+.header-padding {
+  padding: 15px;
+  position: relative;
+}
+
+
+/* Profile
+------------------------------------*/
+header {
+  background-color: #2F3061;
+  color: #F7FFF7;
+}
+
+.bio {
+  text-align: left;
+}
+
+/* Projects
+------------------------------------*/
+.projects {
+  background: #F7FFF7;
+}
+.projects a {
+  color: #2F3061;
+}
+.projects .btn {
+  background: #2F3061;
+  color: #F7FFF7;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.projects .btn:hover {
+  background: rgba(47,48,97,80%);
+}
+.project-description h3 {
+  margin-top: 0px;
+}
+
+#cvBTN {
+  background-color: #2F3061;
+  border-color: #2F3061;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+  background: #A1C6D7;
+}
+
+.work-experience a{
+  color: #2F3061
+}
+
+.date{
+  font-weight: bold;
+}
+
+/* Skills
+------------------------------------*/
+.skills {
+  background-color: #F7FFF7;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Education
+------------------------------------*/
+.education {
+  background-image: url(../images/joanna-kosinska-unsplash.jpg);
+  background-position: bottom right;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+.education p {
+  width: 60%;
+}
+.education h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.graduation{
+  font-weight: bold;
+  padding-top: 4px;
+}
+/* Contact Info
+------------------------------------*/
+footer {
+  background: #343434;
+  text-align: center;
+  color: #F7FFF7;
+}
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-list a {
+  padding: 5px;
+  display: inline-block;
+  color: #FFE66D;
+}
+
+
+
+
+/* Responsive
+------------------------------------*/
+@media screen and (min-width: 750px) {
+
+  header {
+    text-align: left;
+  }
+  .project-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 20px;
+  }
+
+  .header-background {
+    background-color: #2F3061;
+  }
+  .date{
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+
+  .school{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+    }
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-list a {
+    padding: 15px;
+  }
+
+}
+
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+}
+
+.social-media-icon {
+  width: 80%;
+}
+
+.social-media-icon:hover {
+  background-color: #A1C6D7;
+}
+
+.social-media-icon-div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.about-me {
+  padding-top: 100px;
+  background-color: #F7FFF7;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 70px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #2F3061; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%
-}
-
-#cover-photo {
-  max-width: 100%;
-  border-radius: 50%;
-}
-
-.social-media-row {
-  text-align: center;
-  background-color: white;
-}
-
-.social-media-icon {
-  width: 50px;
-}
-
-.section-title {
-  text-align: center;
-}
-
-.job-item, .project-item, .education-entry, .skills-section{
-  background-color: white;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-.project-description {
-  display: inline-block;
-  width: 48%;
-}
-
-.project-image {
-  display: inline-block;
-  width: 48%;
 }
